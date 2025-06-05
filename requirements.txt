@@ -1,0 +1,16 @@
+Django
+djangorestframework
+django-oauth-toolkit
+django-cors-headers
+celery
+redis
+psycopg2-binary
+python-decouple
+coverage
+pytest
+pytest-django
+pytest-cov
+requests
+gunicorn
+tox
+bandit
