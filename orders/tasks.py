@@ -55,7 +55,7 @@ def send_order_email(order_id):
             subject,
             message,
             settings.EMAIL_HOST_USER,
-            [settings.EMAIL_HOST_USER],  # Send to admin
+            [settings.ADMIN_EMAIL],
             fail_silently=False,
         )
 

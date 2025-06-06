@@ -128,6 +128,8 @@ EMAIL_PORT = config('MAIL_PORT', default=587, cast=int)
 EMAIL_USE_TLS = config('MAIL_USE_TLS', default=True, cast=bool)
 EMAIL_HOST_USER = config('MAIL_USERNAME')
 EMAIL_HOST_PASSWORD = config('MAIL_PASSWORD')
+EMAIL_FROM = config('MAIL_FROM')
+ADMIN_EMAIL = config('ADMIN_EMAIL')
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
