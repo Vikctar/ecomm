@@ -40,4 +40,3 @@ class OrderItem(models.Model):
     @property
     def subtotal(self):
         return self.quantity * self.price
-

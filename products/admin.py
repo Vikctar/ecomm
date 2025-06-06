@@ -31,4 +31,3 @@ class ProductAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).prefetch_related('categories')
-

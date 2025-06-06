@@ -2,12 +2,11 @@ import datetime
 from datetime import timedelta
 from decimal import Decimal
 
-from django.test import TestCase
 from django.contrib.auth.models import User
 from django.urls import reverse
-from rest_framework.test import APITestCase, APIClient
-from rest_framework import status
 from oauth2_provider.models import Application, AccessToken
+from rest_framework import status
+from rest_framework.test import APITestCase
 
 from customers.models import Customer
 from orders.models import Order
@@ -24,8 +23,7 @@ class OrderAPITest(APITestCase):
 
         self.customer = Customer.objects.create(
             user=self.user,
-            phone_number='+254700000000',
-            address='123 Test Street'
+            phone_number='+254700000000'
         )
 
         # Setup OAuth2
