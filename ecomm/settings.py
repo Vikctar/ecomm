@@ -135,6 +135,7 @@ ADMIN_EMAIL = config('ADMIN_EMAIL', default='admin@localhost')
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://ecomm-x0gq.onrender.com"
 ]
 
 
