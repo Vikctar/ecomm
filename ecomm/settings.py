@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from decouple import config
 from pathlib import Path
 
+from pygments.lexer import default
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -117,8 +119,8 @@ CELERY_BROKER_URL = config('CELERY_BROKER_URL', default='redis://localhost:6379/
 CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND', default='redis://localhost:6379/0')
 
 # SMS Configuration (Africa's Talking)
-AFRICASTALKING_USERNAME = config('ATS_USERNAME')
-AFRICASTALKING_API_KEY = config('ATS_KEY')
+AFRICASTALKING_USERNAME = config('ATS_USERNAME', default='ATS')
+AFRICASTALKING_API_KEY = config('ATS_KEY', default='ATS_API_KEY')
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
